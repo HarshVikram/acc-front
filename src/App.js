@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation.js';
+import Home from './Home.js';
+import Footer from './components/Footer/Footer.js';
+import Form from './components/Form/Form.js';
+import Product from './components/Product.js';
+import Shop from './Shop.js';
+import Contact from './Contact.js';
+import AdminDashboard from './admin/AdminDashboard';
+import AddCategory from './admin/AddCategory';
+import AddProduct from './admin/AddProduct';
+import ManageProducts from './admin/ManageProducts';
+import UpdateProduct from './admin/UpdateProduct';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={ Home } />
+          <Route path="/product/:productId" exact component={ Product } />
+          <Route path="/shop" component={ Shop } />
+          <Route path="/form" component={ Form } />
+          <Route path="/contact" component={ Contact } />
+          <Route path='/admin/dashboard' exact component={ AdminDashboard } />
+          <Route path='/create/category' exact component={ AddCategory } />
+          <Route path='/create/product' exact component={ AddProduct } />
+          <Route path='/admin/products' exact component={ ManageProducts } />
+          <Route path='/admin/product/update/:productId' exact component={ UpdateProduct } />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
