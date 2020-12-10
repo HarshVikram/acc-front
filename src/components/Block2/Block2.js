@@ -25,7 +25,7 @@ const Block2 = () => {
 	}, [])
 
 	return (
-		<div className='block2'>
+		<div className='block2 mt-5'>
 			<div>
 				<header className='block2-text1 pa3'>Our Products and Services</header>
 			</div>
@@ -36,8 +36,6 @@ const Block2 = () => {
 			</div>
 
 			<div className='block2-text2 pa4'>
-				<p className=''>We offer a wide range of the best quality and highly durable products.
-				 We also deal in water proof and fire proof canvas, printed and dyed canvas, laminated canvas, tents, tirpals and export fabrics.</p>
 				<Link to='/shop' style={{ color:'white', textDecoration: 'none' }}>
 					<button class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gold" href="#0">View all Products</button>
 				</Link>

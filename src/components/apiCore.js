@@ -1,5 +1,7 @@
+import { API } from "../config";
+
 export const formSubmit = data => {
-    return fetch(`http://localhost:8000/form`, {
+    return fetch(`${API}/form`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -17,7 +19,7 @@ export const formSubmit = data => {
 
 
 export const getProducts = (sortBy) => {
-    return fetch(`http://localhost:8000/products?sortBy=${sortBy}&order=desc&limit=6`, {
+    return fetch(`${API}/products?sortBy=${sortBy}&order=desc&limit=6`, {
         method: 'GET'
     })
     .then(response => {
@@ -29,7 +31,7 @@ export const getProducts = (sortBy) => {
 }
 
 export const getCategories = () => {
-    return fetch(`http://localhost:8000/categories`, {
+   return fetch(`${API}/categories`, {
         method: 'GET'
     })
     .then(response => {
@@ -42,7 +44,7 @@ export const getCategories = () => {
 
 export const getFilteredProducts = (skip, limit, filters = {}) => {
     const data = { limit, skip, filters }
-    return fetch(`http://localhost:8000/products/by/search`, {
+    return fetch(`${API}/products/by/search`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -59,7 +61,7 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
 }
 
 export const read = productId => {
-    return fetch(`http://localhost:8000/product/${productId}`, {
+    return fetch(`${API}/product/${productId}`, {
         method: "GET"
     })
         .then(response => {
@@ -69,7 +71,7 @@ export const read = productId => {
 }
 
 export const listRelated = productId => {
-    return fetch(`http://localhost:8000/products/related/${productId}`, {
+    return fetch(`${API}/products/related/${productId}`, {
         method: "GET"
     })
         .then(response => {

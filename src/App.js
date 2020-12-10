@@ -11,6 +11,7 @@ import AdminDashboard from './admin/AdminDashboard';
 import AddCategory from './admin/AddCategory';
 import AddProduct from './admin/AddProduct';
 import ManageProducts from './admin/ManageProducts';
+import ManageCategories from './admin/ManageCategories';
 import UpdateProduct from './admin/UpdateProduct';
 import './App.css';
 
@@ -24,10 +25,11 @@ const App = () => {
           <Route path="/shop" component={ Shop } />
           <Route path="/form" component={ Form } />
           <Route path="/contact" component={ Contact } />
-          <Route path='/admin/dashboard' exact component={ AdminDashboard } />
+          <Route path='/admin/dashboard/Canvas@123' exact component={ AdminDashboard } />
           <Route path='/create/category' exact component={ AddCategory } />
           <Route path='/create/product' exact component={ AddProduct } />
           <Route path='/admin/products' exact component={ ManageProducts } />
+          <Route path='/admin/categories' exact component={ ManageCategories } />
           <Route path='/admin/product/update/:productId' exact component={ UpdateProduct } />
         </Switch>
       </div>

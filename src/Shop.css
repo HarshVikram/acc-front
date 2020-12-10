@@ -97,6 +97,9 @@
 	.col-4.pt-5 > .shop-filter-header {
 		font-size: 18px
 	}
+	.col-8.pt-5 {
+		padding: 40px 10px 0;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -118,6 +121,9 @@
 	.col-4.pt-5 > .shop-filter-header {
 		font-size: 15px
 	}
+	.col-8.pt-5 {
+		padding: 35px 5px 0;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -136,6 +142,9 @@
 @media screen and (max-width: 450px) {
 	.col-4.pt-5 > .shop-filter-header {
 		font-size: 13px
+	}
+	.col-8.pt-5 {
+		padding: 30px 2px 0;
 	}
 }
 

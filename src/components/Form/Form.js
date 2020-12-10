@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../Layout.js';
+import Footer from '../Footer/Footer.js';
 import { formSubmit } from '../apiCore.js';
 import { Link } from 'react-router-dom';
 import '../Block4/Block4.css'
@@ -46,7 +47,7 @@ const Form = () => {
 			<div className='form1-container'> 
 				<div className='form1-heading'>
 					<header className="ph0 mh0 block2-text1">Get in touch with us</header>
-					<p className='mb0 block2-text2'>Have a problem or a query? Don't know what you exactly are looking for? Facing issues in finding the right product or going through the website? 
+					<p className='mb0 block2-text2'>Facing issues in finding the right product or going through the website? Don't know what you exactly are looking for?
 						    Or you just want to talk to us? We have a solution for all your needs. Help us get in touch with you as soon as possible.</p>
 				</div>
 				<form className='form1-content'>
@@ -60,11 +61,11 @@ const Form = () => {
 					    </div>
 					    <div className="mv3">
 					        <label className="db fw6 lh-copy f6 tl block2-text2" htmlFor="number">Phone No.</label>
-					        <input type="text" class="form-control" id="exampleInputEmail1" onChange={handleChange('number')} value={number} placeholder="+91 0123456789" />
+					        <input type="text" class="form-control" id="exampleInputEmail1" onChange={handleChange('number')} value={number} placeholder="Ex: 0123456789" />
 					    </div>
 					    <div className="mv3">
 					        <label className="db fw6 lh-copy f6 tl block2-text2" htmlFor="state">City, State</label>
-					        <input type="text" class="form-control" id="exampleInputEmail1" onChange={handleChange('location')} value={location} placeholder="New Delhi, Delhi" />
+					        <input type="text" class="form-control" id="exampleInputEmail1" onChange={handleChange('location')} value={location} placeholder="Ex: New Delhi, Delhi" />
 					    </div>
 					    <div className="mv3">
 					        <label className="db fw6 lh-copy f6 tl block2-text2" htmlFor="pincode">About</label>
@@ -77,7 +78,7 @@ const Form = () => {
 				<div>
 					<p className='mb0 block2-text2 pb3 pr2 pl2'>Need some help fast and want to contact us immediately?</p>
 					<Link to='/contact' style={{ color:'white', textDecoration: 'none' }}>
-					 	<a class="f6 link dim br3 ph3 pv2 mb4 dib white bg-dark-blue" href="#0">Contact Us</a>
+					 	<button class="f6 link dim br3 ph3 pv2 mb4 dib white bg-dark-blue">Contact Us</button>
 					</Link>
 				</div>
 			</div>
@@ -92,7 +93,7 @@ const Form = () => {
 
 	const showSuccess = () => (
         <div className="alert alert-info" style={{ display: success ? '' : 'none' }}>
-            Your request has been submitted. Please head back to <Link to="/home">Home</Link> or <Link to="/shop">see more of our products</Link>.
+            Your request has been submitted. Please head back to <Link to="/">Home</Link> or <Link to="/shop">see more of our products</Link>.
         </div>
     );
 
@@ -102,6 +103,7 @@ const Form = () => {
 			{showSuccess()}
            	{showError()}
            	{userForm()}
+           	<Footer />
 		</div>	
 	);
 }

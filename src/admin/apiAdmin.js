@@ -1,5 +1,7 @@
+  import { API } from '../config';
+
 export const createCategory = (category) => {
-    return fetch(`http://localhost:8000/category/create/1234`, {
+    return fetch(`${API}/category/create/Canvas@123`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -16,7 +18,7 @@ export const createCategory = (category) => {
 }
 
 export const createProduct = (product) => {
-    return fetch(`http://localhost:8000/product/create/1234`, {
+    return fetch(`${API}/product/create/Canvas@123`, {
         method: 'POST',
         headers: {
             Accept: 'application/json'
@@ -32,7 +34,7 @@ export const createProduct = (product) => {
 }
 
 export const getCategories = () => {
-    return fetch(`http://localhost:8000/categories`, {
+    return fetch(`${API}/categories`, {
         method: 'GET'
     })
     .then(response => {
@@ -44,7 +46,7 @@ export const getCategories = () => {
 }
 
 export const getProducts = () => {
-    return fetch(`http://localhost:8000/products?limit=undefined`, {
+    return fetch(`${API}/products?limit=undefined`, {
         method: 'GET'
     })
         .then(response => {
@@ -54,7 +56,7 @@ export const getProducts = () => {
 }
 
 export const deleteProduct = (productId) => {
-    return fetch(`http://localhost:8000/product/${productId}/1234`, {
+    return fetch(`${API}/product/${productId}/Canvas@123`, {
         method: 'DELETE',
         headers: {
             Accept: 'application/json',
@@ -68,7 +70,7 @@ export const deleteProduct = (productId) => {
 }
 
 export const getProduct = productId => {
-    return fetch(`http://localhost:8000/product/${productId}`, {
+    return fetch(`${API}/product/${productId}`, {
         method: 'GET'
     })
         .then(response => {
@@ -78,12 +80,26 @@ export const getProduct = productId => {
 }
 
 export const updateProduct = (productId, product) => {
-    return fetch(`http://localhost:8000/product/${productId}/1234`, {
+    return fetch(`${API}/product/${productId}/Canvas@123`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
         },
         body: product
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+}
+
+export const deleteCategory = (categoryId) => {
+    return fetch(`${API}/category/${categoryId}/Canvas@123`, {
+        method: 'DELETE',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
     })
         .then(response => {
             return response.json();

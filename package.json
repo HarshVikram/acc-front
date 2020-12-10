@@ -1,6 +1,7 @@
 {
   "name": "aggarwal-canvas-company",
   "version": "0.1.0",
+  "homepage": "http://test.blueskysoftech.com",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -10,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.2",
     "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "react": "^16.13.1",

@@ -6,6 +6,10 @@ body {
 	background-color: #ffe8a6;
 }
 
+button {
+	border: 0;
+}
+
 .jumbotron {
 	background-image: url("./carpets3.jpg");
 	background-repeat: no-repeat;

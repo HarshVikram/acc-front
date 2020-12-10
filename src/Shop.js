@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './components/Layout.js';
+import Footer from './components/Footer/Footer.js';
 import Card2 from './components/Card/Card2';
 import { getCategories, getFilteredProducts } from './components/apiCore';
 import Checkbox from './components/Checkbox';
@@ -60,7 +61,7 @@ const Shop = () => {
 	const loadMoreButton = () => {
 		return (
 			size > 0 && size >= limit && (
-				<button onClick={loadMore} className='btn btn-warning mb5' >
+				<button onClick={loadMore} className='f6 link dim br3 ph3 pv2 mb2 dib white bg-gold' >
 					Load More
 				</button>
 			)
@@ -83,8 +84,8 @@ const Shop = () => {
     <div>
       <Layout />
       <div className='row'>
-      	<div className='col-4 pt-5'>
-      		<h4 className='text-left ml-2 mb-4 shop-filter-header'>Filter by Categories</h4>
+      	<div className='col-4 pt-5 pr-1'>
+      		<h4 className='text-left ml-4 mb-4 shop-filter-header'>Filter by Categories</h4>
 			<ul>
 				<Checkbox categories={categories} handleFilters={filters => handleFilters(filters, 'category')} />
 			</ul>
@@ -97,8 +98,11 @@ const Shop = () => {
 				))}
 			</div>
 		</div>
+	  </div>
+	  <div className='text-center m-4'>
 		{loadMoreButton()}
 	  </div>
+	  <Footer />
     </div>
 			
   );

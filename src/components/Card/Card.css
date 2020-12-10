@@ -41,6 +41,10 @@ div.card-header {
 	background-color: #FFB700;
 }
 
+div.card-body.card-2 {
+	background-color: white;
+}
+
 .card-header-12 {
 	font-family: 'Rubik', sans-serif;
 	color: black;
@@ -53,6 +57,14 @@ div.card-header {
 	color: black;
 	font-size: 18px;
 	padding: 0 0 0 20px;
+}
+
+p.card-header {
+	padding: 5px;
+}
+
+p.card-header.mb-1 {
+	padding: 5px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -93,6 +105,9 @@ div.card-header {
 	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-gold.block2-text3 {
 		padding: 6px 10px;
 	}
+	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-light-red.block2-text3 {
+		padding: 6px 10px;
+	}
 	.card-header-12 {
 		font-size: 21px;
 	}
@@ -122,6 +137,9 @@ div.card-header {
 	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-gold.block2-text3 {
 		padding: 4px 8px;
 	}
+	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-light-red.block2-text3 {
+		padding: 6px 10px;
+	}
 }
 
 @media screen and (max-width: 620px) {
@@ -133,6 +151,9 @@ div.card-header {
 	}
 	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-gold.block2-text3 {
 		padding: 4px 6px;
+	}
+	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-light-red.block2-text3 {
+		padding: 6px 10px;
 	}
 }
 
@@ -160,6 +181,9 @@ div.card-header {
 	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-gold.block2-text3 {
 		padding: 3px 5px;
 	}
+	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-light-red.block2-text3 {
+		padding: 6px 10px;
+	}
 	.card-header-12 {
 		font-size: 15px;
 		padding: 0 0 0 8px;
@@ -177,9 +201,6 @@ div.card-header {
 	.card-header-12 {
 		font-size: 14px;
 	}
-	.card-content-12 {
-		font-size: 7px;
-	}
 }
 
 @media screen and (max-width: 400px) {
@@ -192,22 +213,18 @@ div.card-header {
 	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-gold.block2-text3 {
 		padding: 2px 3px;
 	}
+	.link.dim.br3.ph3.pv2.mt2.dib.white.bg-light-red.block2-text3 {
+		padding: 6px 10px;
+	}
 	.card-header-12 {
 		font-size: 13px;
 		padding: 0 0 0 6px;
 	}
 	.card-content-12 {
-		font-size: 7px;
 		padding: 0 0 0 6px;
 	}
 	.card-content-12 > p {
 		margin-bottom: 2px;
-	}
-}
-
-@media screen and (max-width: 380px) {
-	.card-content-12 {
-		font-size: 6px;
 	}
 }
 

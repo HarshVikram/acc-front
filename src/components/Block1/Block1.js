@@ -6,7 +6,7 @@ import './Block1.css';
 const Block1 = () => {
 	return (
 		<div>
-		  <Layout description="Providing best services, all over India." />
+		  <Layout />
 		</div>
 	);
 }
